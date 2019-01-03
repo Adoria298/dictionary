@@ -9,7 +9,7 @@ def test_init_no_params():
 
 def test_init_params():
     test_dict = Dictionary("latin.csv")
-    test_dict.parse_csv()
+    test_dict._parse_csv()
     with open('latin.csv', 'r') as test_csv:
         assert type(test_dict._dictionary) == type(csv.DictReader(test_csv))
 

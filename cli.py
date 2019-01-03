@@ -11,4 +11,6 @@ if __name__ == "__main__":
                         action='store',
                         help='Path to Dictionary-compatible csv file.')
     args = parser.parse_args()
-    print(args)
+    dictionary = Dictionary(args.dictionary)
+    while True:
+        print(parse_search(input(">"), dicti = dictionary))

@@ -34,12 +34,12 @@ Params:
         elif not os.path.exists(file):
             raise FileNotFoundError(str(file))
         else: 
-            self._csv_file = _open(file, "r")
+            self._csv_file = open(file, "r")
 
 
 
     def _parse_csv(self):
-"""
+        """
 Creates a csv.DictReader object.
 """
         self._dictionary = csv.DictReader(self._csv_file)
