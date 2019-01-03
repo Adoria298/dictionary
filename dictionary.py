@@ -12,33 +12,36 @@ Wrapper around a csv file in with the following headers:
     def __init__(self, file=None):
         self._csv_file = file
         if self._csv_file is not None:
-            self.open(file)
-            self._dictionary = self.parse_csv()
+            self._open(file)
+            self._dictionary = self._parse_csv()
         else:
             self._dictionary = None
 
-    def open(self, file):
+    def _open(self, file):
         """
 Optional method. Used to initialise dictionary.
 Will be called during __init__ if a file parameter is supplied to __init__.
-Calls parse_csv.
+Calls _parse_csv.
 
 Params:
     file: str = a csv file with headers as described above.
 """
         if file is None:
             if self._csv_file is not None:
-                self.open(self._csv_file)
+                self._open(self._csv_file)
             else:
                 raise ValueError("file is None")
         elif not os.path.exists(file):
             raise FileNotFoundError(str(file))
         else: 
-            self._csv_file = open(file, "r")
+            self._csv_file = _open(file, "r")
 
 
 
-    def parse_csv(self):
+    def _parse_csv(self):
+"""
+Creates a csv.DictReader object.
+"""
         self._dictionary = csv.DictReader(self._csv_file)
         return self._dictionary
 
