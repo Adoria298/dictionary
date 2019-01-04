@@ -1,0 +1,20 @@
+{
+    "lang_code": "la",
+    "data_defs": {
+        "1d": "1st Declension",
+        "2d": "2nd Declension",
+        "3d": "3rd Declension",
+        "4d": "4th Declension",
+        "5d": "5th Declension",
+        "1/2d": "1st/2nd Declension",
+        "1c": "1st Conjugation",
+        "2c": "2nd Conjugation",
+        "3c": "3rd Conjugation",
+        "4c": "4th Conjugation",
+        "irreg": "irregular",
+        "m": "masculine",
+        "f": "feminine",
+        "c": "common",
+        "n": "neuter"
+    }
+}

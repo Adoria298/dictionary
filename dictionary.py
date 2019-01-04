@@ -1,5 +1,6 @@
 import csv
 import os
+import json
 
 class Dictionary:
     """
@@ -9,13 +10,28 @@ Wrapper around a csv file in with the following headers:
     - data - extra information (e.g. gender, denclension, etc)
     - defi - the *defi*nition of the word.
 """
-    def __init__(self, file=None):
+    def __init__(self, file, lang_config):
         self._csv_file = file
         if self._csv_file is not None:
             self._open(file)
             self._dictionary = self._parse_csv()
         else:
             self._dictionary = None
+
+        self._config = lang_config
+        self._find_config()
+
+    def _find_config(self):
+        """
+Loads language configuration. If not found, defaults are assumed.
+        """
+        if self._config is not None:
+            if self._config.split('.')[-1] == 'json':
+                self._config = json.load(open(self._config))
+            else:
+                raise ValueError('File type not supported: ' + str(self._config))
+        else:
+            self._config = {}
 
     def _open(self, file):
         """
@@ -87,7 +103,11 @@ Params:
             or word_defi["defi"] == ' - '):
                 word_data = ""
         else:
-            word_data = '- ' + word_defi["data"]
+            word_data = "- "
+            for datum in word_defi["data"].split(','):
+                word_data += self._config.get("data_defs").get(datum, datum) # if the datum has a definition, use it, otherwise use the datum
+                word_data += ', '
+
         defi = word_defi["defi"]
         return """
 {word}
