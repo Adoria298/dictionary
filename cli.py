@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 
 def parse_search(line: str, dicti: Dictionary):
     results = dicti.search(line)
-    if len(results) < 0:
+    if len(results) <= 0:
         result_str = "No results found for search: " + line
     else:
         if len(results) == 1: # not elif so the formatting can be easily changed
