@@ -25,14 +25,7 @@ girl
 
 ```
 
-To exit, press CTRL+C to produce a KeyboardInterrupt error. There are no `try/except` statements to catch it yet, so you will see a small traceback like the one below.
-
-```python
-Traceback (most recent call last):
-  File "cli.py", line 30, in <module>
-    print(parse_search(input("> "), dicti = dictionary))
-KeyboardInterrupt
-```
+To exit, press CTRL+C.
 
 ## `csv` file format
 
