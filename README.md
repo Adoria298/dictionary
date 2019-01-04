@@ -9,9 +9,9 @@ At the commandline, run: `python cli.py {dictionary file}`. Ensure the `python` 
 
 `python cli.py latin.csv`
 
-This produces a prompt. 
+This produces a prompt.
 
- `> `
+ `>`
 
 At this prompt you can type your search term.
 
