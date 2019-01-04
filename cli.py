@@ -6,11 +6,10 @@ def parse_search(line: str, dicti: Dictionary):
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="Dictionary Lookup")
-    parser.add_argument('--dictionary', '-d',   # flags 
-                        dest='dictionary', 
+    parser.add_argument('dictionary',   # positional 
                         action='store',
                         help='Path to Dictionary-compatible csv file.')
     args = parser.parse_args()
     dictionary = Dictionary(args.dictionary)
     while True:
-        print(parse_search(input(">"), dicti = dictionary))
+        print(parse_search(input("> "), dicti = dictionary))
