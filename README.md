@@ -5,7 +5,7 @@ An example Latin dictionary is provided, feel free to update as your contributio
 
 ## usage
 
-At the commandline, run: `python cli.py {dictionary file}`. Ensure the `python` command points to python 3.6 at least. If it does not, but `python3` or `python3.6` do, use them instead. The dictionary file can be any csv file in the format defined below. Included in this repository is a limited Latin dictionary, `latin.csv`. You can use it like with the following command.
+At the commandline, run: `python cli.py {dictionary file}`. Ensure the `python` command points to python 3.6 at least. If it does not, but `python3` or `python3.6` do, use them instead. The dictionary file can be any csv file in the format defined below. Included in this repository is a limited Latin dictionary, `latin.csv`. You can use it with the following command.
 
 `python cli.py latin.csv`
 
@@ -34,7 +34,7 @@ Traceback (most recent call last):
 KeyboardInterrupt
 ```
 
-## csv file format
+## `csv` file format
 
 - Should be saved as `.csv`
 
