@@ -79,11 +79,18 @@ Params:
         return result_str
 
     def _format_word(self, word_defi):
+        word = word_defi["word"]
+        word_type = word_defi["type"]
+        if (word_defi["data"] == '-' 
+            or word_defi["data"] == '- '
+            or word_defi["data"] == ' -'
+            or word_defi["defi"] == ' - '):
+                word_data = ""
+        else:
+            word_data = '- ' + word_defi["data"]
+        defi = word_defi["defi"]
         return """
 {word}
 {type} {data}
 {defi}
-""".format(word=word_defi['word'], 
-            type=word_defi['type'], 
-            data='- '+word_defi['data'],
-            defi=word_defi['defi'])
+""".format(word=word, type=word_type, data=word_data, defi=defi)
