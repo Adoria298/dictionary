@@ -104,9 +104,11 @@ Params:
                 word_data = ""
         else:
             word_data = "- "
-            for datum in word_defi["data"].split(','):
+            for index, datum in enumerate(word_defi["data"].split(',')):
                 word_data += self._config.get("data_defs").get(datum, datum) # if the datum has a definition, use it, otherwise use the datum
-                word_data += ', '
+                if len(word_defi['data'].split(',')) > 1:
+                    if not len(word_defi['data'].split(','))-1 == index:
+                        word_data += ', '
 
         defi = word_defi["defi"]
         return """
