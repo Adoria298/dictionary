@@ -7,6 +7,7 @@ def test_init_no_params():
     assert test_dict._csv_file == None
     assert test_dict._dictionary == None
 
+# doesn't work as a test
 def test_init_params():
     test_dict = Dictionary("latin.csv")
     test_dict._parse_csv()
