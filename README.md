@@ -5,28 +5,28 @@ An example Latin dictionary is provided, feel free to update as your contributio
 
 ## csv file format
 
- - Should be saved as `.csv`
+- Should be saved as `.csv`
 
- - Should be excel-compatible
+- Should be excel-compatible
 
- - Headers:
+- Headers:
 
-    - word
+    1. `word`
 
         - used to store the searchable word
 
-    - type
+    2. `type`
 
         - language-specific, usually 'noun', 'verb', etc
 
-    - data
+    3. `data`
 
-        - any extra data about the word. if there is none, use a dash -
+        - any extra data about the word. if there is none, use a dash `-`
 
-    - defi
+    4. `defi`
 
         - the definition of the word
 
- - delimiter: a comma - ,
+- delimiter: a comma - `,`
 
- - escape char: a pair of double quotes surrounding the element - ""
+- escape character: a pair of double quotes surrounding the element - `""`
