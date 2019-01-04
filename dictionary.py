@@ -68,7 +68,7 @@ Params:
 """
         results = self.search(term)
         if len(results) <= 0:
-            result_str = "No results found for search: " + line
+            result_str = "No results found for search: " + term
         else:
             if len(results) == 1: # not elif so the formatting can be easily changed
                 result_str = "1 result found."
