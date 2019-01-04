@@ -60,6 +60,12 @@ Params:
         return results
 
     def formatted_search(self, term):
+        """
+Formats search results. Wraps around self.search
+
+Params:
+    term: str = a search term.
+"""
         results = self.search(term)
         if len(results) <= 0:
             result_str = "No results found for search: " + line
@@ -69,11 +75,15 @@ Params:
             else:
                 result_str = str(len(results)) + " results found."
             for i in results:
-                result_str += f"""
-
-{i['word']}
-{i['type']} - {i['data']}
-{i['defi']}
-            """
+                result_str += self._format_word(i)
         return result_str
 
+    def _format_word(self, word_defi):
+        return """
+{word}
+{type} {data}
+{defi}
+""".format(word=word_defi['word'], 
+            type=word_defi['type'], 
+            data='- '+word_defi['data'],
+            defi=word_defi['defi'])
