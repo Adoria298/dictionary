@@ -42,7 +42,7 @@ Params:
         """
 Creates a csv.DictReader object.
 """
-        self._dictionary = csv.DictReader(self._csv_file)
+        self._dictionary = list(csv.DictReader(self._csv_file))
         return self._dictionary
 
     def search(self, term):
