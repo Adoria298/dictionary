@@ -3,7 +3,15 @@
 A dictionary look up app designed for the command line user.
 An example Latin dictionary is provided, feel free to update as your contribution, or to add other languages.
 
+## install
+
+1. Navigate to the [latest release](https://github.com/Adoria298/dictionary/releases/latest). Download an archive for your system from there (.zip or .tar.gz files).
+
+2. Unzip it, and move to the created directory. You may want to add this folder to your shell path.
+
 ## usage
+
+Ensure the directory created by installation instructions is in the shell path (or you're in it.)
 
 At the commandline, run: `python cli.py {dictionary file} {config file}`. Ensure the `python` command points to python 3.6 at least. If it does not, but `python3` or `python3.6` do, use them instead. The dictionary file can be any csv file in the format defined below. Included in this repository is a limited Latin dictionary, `latin.csv`. By default `latin.json` will be used as the config file, if this parameter is not supplied. You can use it with the following command.
 
