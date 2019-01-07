@@ -3,11 +3,11 @@ word,type,data,defi
 "puer, pueri",noun,"2d,m",boy
 "vox, vocis",noun,"3d,f",voice
 "porto, portare, portavi, portatus",verb,1c,to carry
-"sedeo, sedere, sedevi, sedetus",verb,2c,to sit
+"sedeo, sedere, sedi, sessus",verb,2c,to sit
 "mitto, mittere, missi, missitus",verb,3c,to send
-"audio, audire, audivi, auditus",verb,4c,to hear
-"pulcher, pulchra, pulchrum",adjective,1/2d,beautiful
-"omnis, omnes",adjective,3d,all
+"audio, audire, audivi, auditus",verb,4c,"to hear, listen"
+"pulcher, pulchra, pulchrum",adjective,1/2d,"beautiful, handsome"
+"omnis, omne",adjective,3d,"all, everything"
 lente,adverb,-,slowly
 "sum, esse, fui",verb,irreg,to be
 "possum, posse, potui",verb,irreg,to be able
