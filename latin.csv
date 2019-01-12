@@ -14,3 +14,28 @@ lente,adverb,-,slowly
 "volo, velle, volui",verb,irreg,"to want, wish"
 "nolo, nelle, nolui",verb,irreg,"to not want, to be unwilling"
 "baculum, baculi",noun,"2d,n",stick
+"a, ab",preposition,"abl,pref","from, away from, by (prefix = away)"
+"absum, abesse, afui",verb,irreg,"to be absent, be away, be distant from"
+"ac, atque",conjunction,ind,and
+"accido, accidere, accidi",verb,3c,to happen
+"accipio, accipere, accepi, acceptus",verb,3c,"to accept, take in, receive"
+ad,preposition,"acc,pref","to, towards, at"
+adeo,adverb,ind,"so much, so greatly, to such an extent"
+"adsum, adesse, adfui",verb,irreg,"to be here, be present"
+"advenio, advenire, adveni",verb,4c,to arrive
+"aedifico, aedificare, aedificavi, aedificatus",verb,1c,to build 
+"ager, agri",noun,"2d,m",field
+"ago, agere, egi, actus",verb,3c,"to do, act, drive"
+allii … allii,-,-,some … others
+"alius, alia, aliud",adjective,"1/2d,pron","other, another, else"
+"alter, altera, alterum",adjective,"1/2d,pron","the other, another, one (of two), the second (of two)"
+"altus, alta, altum",adjective,1/2d,"high, deep"
+"ambulo, ambulare, ambulavi",verb,1c,to walk
+"amicus, amici",noun,"2d,m",friend
+"amo, amare, amavi, amatus",verb,1c,"to love, like"
+"amor, amoris",noun,"3d,m",love
+"ancilla, ancillae",noun,"1d,f","slave-girl, slave-woman"
+"animus, animi",noun,"1d,m","spirit, soul, mind"
+"annus, anni",noun,"2d,m",year
+antea,adverb,ind,before
+"appropinquo, appropinquare, appropinquavi",verb,"1c,dat","to approach, come near to"

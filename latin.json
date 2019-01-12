@@ -15,6 +15,13 @@
         "m": "masculine",
         "f": "feminine",
         "c": "common",
-        "n": "neuter"
+        "n": "neuter",
+        "abl": "+ablative",
+        "acc": "+accusative",
+        "dat": "+dative",
+        "gen": "+genitive",
+        "ind": "indeclinable",
+        "pref": "also used as a prefix",
+        "pron": "also used as a pronoun"
     }
 }
