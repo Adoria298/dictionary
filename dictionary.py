@@ -23,7 +23,7 @@ lang_config is a JSON file with the following information:
 
 For an example for these two types of file, see latin.csv and latin.json
 """
-    def __init__(self, file=None, lang_config):
+    def __init__(self, file, lang_config):
         self._csv_file = file
         self._config = lang_config
         self._find_config()
