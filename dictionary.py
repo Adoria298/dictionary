@@ -10,16 +10,25 @@ Wrapper around a csv file in with the following headers:
     - data - extra information (e.g. gender, denclension, etc)
     - defi - the *defi*nition of the word.
 """
-    def __init__(self, file, lang_config):
+    def __init__(self, file=None, lang_config):
         self._csv_file = file
-        if self._csv_file is not None:
-            self._open(file)
-            self._dictionary = self._parse_csv()
-        else:
-            self._dictionary = None
-
         self._config = lang_config
         self._find_config()
+
+        if self._csv_file is not None:
+            self._open(self._csv_file)
+            self._dictionary = self._parse_csv()
+        else:
+            if self._config.get('lang', None) is None:
+                self._dictionary = None
+            else:
+                lang = str(self._config.get('lang'))
+                if os.path.exists(lang+'.csv'):
+                    self._open(lang+'.csv')
+                    self._dictionary = self._parse_csv()
+                else:
+                    self._dictionary=None        
+
 
     def _find_config(self):
         """
@@ -35,9 +44,8 @@ Loads language configuration. If not found, defaults are assumed.
 
     def _open(self, file):
         """
-Optional method. Used to initialise dictionary.
-Will be called during __init__ if a file parameter is supplied to __init__.
-Calls _parse_csv.
+Used to initialise dictionary.
+Will be called during __init__.
 
 Params:
     file: str = a csv file with headers as described above.
