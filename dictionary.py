@@ -9,6 +9,19 @@ Wrapper around a csv file in with the following headers:
     - type - the type of word it is (e.g. noun, verb, etc)
     - data - extra information (e.g. gender, denclension, etc)
     - defi - the *defi*nition of the word.
+
+lang_config is a JSON file with the following information:
+    - lang - the language name can to e used to find the csv file (a string)
+    - data_defs - human-readable replacements for a formatted data section 
+                - in this way: 
+                ````json
+                {
+                    "{data shorthand}": "{nice replacement}",
+                    ...
+                }
+                ````
+
+For an example for these two types of file, see latin.csv and latin.json
 """
     def __init__(self, file=None, lang_config):
         self._csv_file = file
