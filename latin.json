@@ -22,6 +22,7 @@
         "gen": "+genitive",
         "ind": "indeclinable",
         "pref": "also used as a prefix",
-        "pron": "also used as a pronoun"
+        "pron": "also used as a pronoun",
+	"pl": "plural"
     }
 }
